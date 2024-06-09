@@ -26,4 +26,9 @@ async def heh(ctx, count_heh = 5):
 async def password(ctx, long = 10):
     await ctx.send(generate(long))
 
+@bot.command()
+async def joined(ctx, member: discord.Member):
+    """Says when a member joined."""
+    await ctx.send(f'{member.name} joined {discord.utils.format_dt(member.joined_at)}')
+
 bot.run(token)
