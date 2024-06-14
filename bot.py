@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from main import generate, math, quotes
+from main import generate, math, quotes, dictionary
 
 with open("token.txt", "r") as f:
     token = f.read()
@@ -25,6 +25,10 @@ async def heh(ctx, count_heh = 5):
 @bot.command()
 async def password(ctx, long = 10):
     await ctx.send(generate(long))
+
+@bot.command()
+async def brainroot(ctx, name):
+    await ctx.send(dictionary(name))
 
 @bot.command()
 async def joined(ctx, member: discord.Member):
