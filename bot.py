@@ -24,10 +24,12 @@ async def heh(ctx, count_heh = 5):
 
 @bot.command()
 async def password(ctx, long = 10):
+    "Membuatkan password secara acak dengan jumlah password yang dapat diatur oleh user"
     await ctx.send(generate(long))
 
 @bot.command()
 async def brainroot(ctx, name):
+    "Menjelaskan kata brainroot yang ingin diketahui"
     await ctx.send(dictionary(name))
 
 @bot.command()
@@ -40,5 +42,7 @@ async def repeat(ctx, times: int, content='repeating...'):
     """Repeats a message multiple times."""
     for i in range(times):
         await ctx.send(content)
+
+
 
 bot.run(token)
