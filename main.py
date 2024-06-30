@@ -23,13 +23,6 @@ def quotes():
     keluaran = random.choice(kata)
     return keluaran
 
-def math():
-    asal = "x+-"
-    a = random.randint(1, 100)
-    b = random.choice(asal)
-    c = random.randint(1, 100)
-    kali = f"{a} {b} {c} =....?"
-    return kali
 
 def dictionary(name):
     brainroot_dictionary = {
